@@ -1,0 +1,105 @@
+.base{
+  position: absolute;
+  top: 0;bottom: 0;left: 0;right: 0;
+  width: 300px;
+  height: 110px;
+  margin: auto;
+  border-radius: 20px 20px 0 0;
+  background-color: #f7c919;
+}
+.inviz{
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.windows{
+  position: absolute;
+  top: 20px; left: 20px;
+  display: flex;
+  gap: 10px;
+}
+.window{
+  background:linear-gradient(-45deg, #9be1e3 0, #9be1e3 33%, #bff0f4 33%, #bff0f4 66%, #9be1e3 66%, #9be1e3 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+.window.right{
+  margin-left: 50px;
+  border-radius: 5px 0px 0px 5px;
+}
+.light{
+  position: absolute;
+  right: 0; bottom: 8px;
+  width: 10px;
+  height: 15px;
+  border: 1px solid #f37c00;
+  background: #f31f00;
+}
+.light.back{
+  left: 0; bottom: 8px;
+  width: 8px;
+  height: 25px;
+  border: 1px solid #f37c00;
+  background: #f31f00;
+}
+.line{
+  width: 300px;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  background-color: #2f3031;
+}
+.line.top{
+  overflow: hidden;  
+  bottom: 0;top: 5px;
+  border-radius: 20px;
+}
+.cricle-back{
+  position: absolute;
+  bottom: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #fff 50%, #000 50%);
+}
+.cricle-back.left{
+  left: 50px;
+}
+.cricle-back.right{
+  right: 50px;
+}
+.cricle{
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+  background: linear-gradient(to right, #221e1f 50%, #88898b 50%);
+}
+.cricle-back::before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border: solid;
+  top: 5px;
+  margin: auto;
+  border-width: 5px 0 0 0;
+  border-radius: 50%;
+  border-color: #fff;
+  opacity: 0.3;
+  width: 50px;
+  height: 50px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
